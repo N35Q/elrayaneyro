@@ -17,6 +17,7 @@
         font-family: 'Bangers', serif7;
         font-size: 15px;
       }
+            .oculto { display: none; }
       .encabezado {
       background-color: blue;
       height: 200px;
@@ -38,18 +39,6 @@
     <audio id="myAudio">
       <source src="https://www.myinstants.com/media/sounds/goofy-ahh-sounds.mp3" type="audio/mpeg" preload:"auto">
     </audio>
-    <script>
-      function toggleDiv() {
-        var contenido = document.getElementById("games");
-          if (contenido.style.display === "none") {
-            contenido.style.display = "block";
-          } else {
-            contenido.style.display = "none";
-          }
-      }
-    </script>
-    <div style="height: 20px;" onclick="toggleDiv()" style="display: none;">
-    </div>
     <div id="games">
       <div class="encabezado">
         <button class="goofy" style="position: relative; top: 5%; left: 0%; transform: translate(-145.5px, 0px);" onclick="document.getElementById('myAudio').play()">Click para obtener recompensa</button>
@@ -65,7 +54,8 @@
         <iframe style="width: 1600px; height: 900px;" src="https://freetoplayz.github.io/ragdoll-hit/"></iframe>
       </div>
     </div>
-      <a href="https://docs.google.com/spreadsheets/d/13rG6e7219V4yrWwQ8HXBMBa8jtvNGRWya9M4iBusnOU/edit?usp=sharing">
+    <button onclick="document.getElementById('games').classList.toggle('oculto');">Mostrar/Ocultar</button>
+     <a href="https://docs.google.com/spreadsheets/d/13rG6e7219V4yrWwQ8HXBMBa8jtvNGRWya9M4iBusnOU/edit?usp=sharing">
       <button class="goofy">Plantilla examen B2</button>
     </a>
   </body>
