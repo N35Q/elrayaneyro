@@ -44,26 +44,33 @@
       <button class="goofy" style="position: relative; top: 5%; left: 0%; transform: translate(-145.5px, 0px);" onclick="document.getElementById('myAudio').play()">Click para obtener recompensa</button>
        <h1 style="margin-top: 10px; margin-bottom: 50px; color: red; font-family: 'Bangers', serif; text-align: center; height: 100px; font-size: 100px;">El rayaneyro</h1>
     </div>
-    <div style:"align-content: center;">
-    <button class="goofy" onclick="document.getElementById('games').classList.toggle('visible');">Games</button>
-    <div class="oculto" id="games">
-      <div style="margin: 35px; position: relative; height: 402px;" onclick="{document.getElementById('myAudio').currentTime = 0; document.getElementById('myAudio').pause();}">
-        <iframe onmouseover="document.getElementById('myAudio').play()" src="https://scratch.mit.edu/projects/975751909/embed" style="border-style: solid; border-width: 25px; border-color: RGB(20, 255, 20); border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 485px; height: 402px;"></iframe>
+    
+    <div style:"align-items: center;">
+      <button class="goofy" onclick="document.getElementById('Insultos').classList.toggle('visible');">Prueba Insultos</button>
+      <button class="goofy" onclick="document.getElementById('games').classList.toggle('visible');">Games</button>
+      <button class="goofy" onclick="document.getElementById('B2').classList.toggle('visible');">Plantilla B2</button>
+
+      <div class="oculto" id="Insultos">
+        <iframe allow="fullscreen; autoplay;" allowfullscreen width="795" height="690" frameborder="0" src="https://es.educaplay.com/juego/22583170-desafio_de_insultos_andaluces.html"></iframe>
       </div>
-      <div style="border-style: solid; border-width: 25px; border-color: red; border-radius: 20px; margin: 35px; display: flex; justify-content: center; align-content: center">
-        <iframe style="width: 1600px; height: 900px;" src="https://bitlifeonline.github.io/ragdoll-archers/"></iframe>
+      
+      <div class="oculto" id="games">
+        <div style="margin: 35px; position: relative; height: 402px;" onclick="{document.getElementById('myAudio').currentTime = 0; document.getElementById('myAudio').pause();}">
+          <iframe onmouseover="document.getElementById('myAudio').play()" src="https://scratch.mit.edu/projects/975751909/embed" style="border-style: solid; border-width: 25px; border-color: RGB(20, 255, 20); border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 485px; height: 402px;"></iframe>
+        </div>
+        
+        <div style="border-style: solid; border-width: 25px; border-color: red; border-radius: 20px; margin: 35px; display: flex; justify-content: center; align-content: center">
+          <iframe style="width: 1600px; height: 900px;" src="https://bitlifeonline.github.io/ragdoll-archers/"></iframe>
+        </div>
+        
+        <div style="border-style: solid; border-width: 25px; border-color: red; border-radius: 20px; margin: 35px; display: flex; justify-content: center; align-content: center">
+          <iframe style="width: 1600px; height: 900px;" src="https://freetoplayz.github.io/ragdoll-hit/"></iframe>
+        </div>
       </div>
-      <div style="border-style: solid; border-width: 25px; border-color: red; border-radius: 20px; margin: 35px; display: flex; justify-content: center; align-content: center">
-        <iframe style="width: 1600px; height: 900px;" src="https://freetoplayz.github.io/ragdoll-hit/"></iframe>
+      
+      <div class="oculto" id="B2">
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmJ9hjsM67T9Sitp5Fx887XyazbO3J1BkVqabtnWryP7LjJ1j7yIGNKaRvFaqY3EGVMSOct4QcQECO/pubhtml?widget=true&amp;headers=false"></iframe>
       </div>
-    </div>
-    <a href="https://docs.google.com/spreadsheets/d/13rG6e7219V4yrWwQ8HXBMBa8jtvNGRWya9M4iBusnOU/edit?usp=sharing">
-      <button class="goofy">Plantilla examen B2</button>
-    </a>
-    <button class="goofy" onclick="document.getElementById('Insultos').classList.toggle('visible');">Prueba Insultos</button>
-    <div class="oculto" id="Insultos">
-      <iframe allow="fullscreen; autoplay;" allowfullscreen width="795" height="690" frameborder="0" src="https://es.educaplay.com/juego/22583170-desafio_de_insultos_andaluces.html"></iframe>
-    </div>
     </div>
   </body>
 </html>
