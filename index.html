@@ -1,17 +1,17 @@
 <!DOCTYPE html>
   <head>
-    
+
       <title>elrayaneyro</title>
-    
+
     <meta name="google-site-verification" content="rELLrlU3w8sklwm1JmM_mFHnn2viADnnKxexgZQlLEI" />
-    
+
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/N35Q/elrayaneyro/refs/heads/main/LOGO.ico">
-    
+
     <style>
       body {
         background-color: lightblue;
       }
-      
+
       .goofy {
         border-style: solid;
         border-width: 5px;
@@ -24,11 +24,11 @@
         font-family: 'Bangers', serif7;
         font-size: 15px;
       }
-      
+
       .oculto { display: none; }
-      
+
       .visible { display: block; }
-      
+
       .encabezado {
         background-color: blue;
         height: 200px;
@@ -50,7 +50,48 @@
         justify-content: center;
         align-content: center;
       }
-      
+
+        .poema {
+          max-width: 600px;
+          margin: auto;
+          padding: 20px;
+          font-family: Georgia, serif;
+          background-color: #f9f9f9;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .poema h2 {
+          text-align: center;
+          margin-bottom: 1em;
+        }
+
+        .poema p {
+          white-space: pre-line;
+          line-height: 1.6;
+        }
+
+        .poema .autor {
+          text-align: right;
+          margin-top: 1em;
+          font-style: italic;
+        }
+
+        .poema .toggle-link {
+          display: inline-block;
+          margin-top: 10px;
+          color: #007BFF;
+          cursor: pointer;
+          text-decoration: underline;
+          font-size: 0.95em;
+        }
+
+        .poema .explicacion {
+          margin-top: 10px;
+          font-size: 0.95em;
+          color: #333;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,33 +106,63 @@
       <button class="goofy" style="position: relative; top: 5%; left: 0%; transform: translate(-145.5px, 0px);" onclick="document.getElementById('myAudio').play()">Click para obtener recompensa</button>
        <h1 style="margin-top: 10px; margin-bottom: 50px; color: red; font-family: 'Bangers', serif; text-align: center; height: 100px; font-size: 100px;">El rayaneyro</h1>
     </div>
-    
+
     <div style="display: flex; justify-content: center;">
       <button class="goofy" onclick="document.getElementById('Insultos').classList.toggle('visible');">Prueba Insultos</button>
       <button class="goofy" onclick="document.getElementById('games').classList.toggle('visible');">Games</button>
       <button class="goofy" onclick="document.getElementById('B2').classList.toggle('visible');">Plantilla B2</button>
+      <button class="goofy" onclick="document.getElementById('poemas').classList.toggle('visible');">poemas</button>
     </div>
 
     <div class="oculto" id="Insultos">
       <iframe allow="fullscreen; autoplay;" allowfullscreen width="795" height="690" frameborder="0" src="https://es.educaplay.com/juego/22583170-desafio_de_insultos_andaluces.html"></iframe>
     </div>
-      
+
     <div class="oculto" id="games">
       <div style="margin: 35px; position: relative; height: 402px;" onclick="{document.getElementById('myAudio').currentTime = 0; document.getElementById('myAudio').pause();}">
         <iframe onmouseover="document.getElementById('myAudio').play()" src="https://scratch.mit.edu/projects/975751909/embed" style="border-style: solid; border-width: 25px; border-color: RGB(20, 255, 20); border-radius: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 485px; height: 402px;"></iframe>
       </div>
-        
+
       <div class="ragdoll">
         <iframe style="width: 1600px; height: 900px;" src="https://bitlifeonline.github.io/ragdoll-archers/"></iframe>
       </div>
-        
+
       <div class="ragdoll">
         <iframe style="width: 1600px; height: 900px;" src="https://freetoplayz.github.io/ragdoll-hit/"></iframe>
       </div>
     </div>
-      
+
     <div class="oculto" id="B2">
       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmJ9hjsM67T9Sitp5Fx887XyazbO3J1BkVqabtnWryP7LjJ1j7yIGNKaRvFaqY3EGVMSOct4QcQECO/pubhtml?widget=true&amp;headers=false"></iframe>
+    </div>
+
+    <div class="poema oculto" id="poemas">
+      <h2>Un soneto me manda hacer Violante</h2>
+      <p>
+    Un soneto me manda hacer Violante,
+    que en mi vida me he visto en tal aprieto;
+    catorce versos dicen que es soneto:
+    burla burlando van los tres delante.
+
+    Yo pensé que no hallara consonante,
+    y estoy a la mitad de otro cuarteto;
+    mas si me veo en el primer terceto,
+    no hay cosa en los cuartetos que me espante.
+
+    Por el primer terceto voy entrando,
+    y parece que entré con pie derecho,
+    pues fin con este verso le voy dando.
+
+    Ya estoy en el segundo, y aun sospecho
+    que estoy los trece versos acabando;
+    contad si son catorce, y está hecho.
+      </p>
+      <p class="autor">— Lope de Vega</p>
+
+      <span class="toggle-link" onclick="document.getElementById('explicacion').classList.toggle('visible');">¿Por qué este poema?</span>
+      <div class="explicacion oculto" id="explicacion">
+        Este poema es el primero que leí siendo algo consciente. Me mandaron a comentar o analizar un poema con 12 años y escogí este. Desde entonces, el soneto es mi estilo de poema favorito y al que accedo siempre como primera opción.
+      </div>
     </div>
   </body>
 </html>
