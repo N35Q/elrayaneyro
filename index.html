@@ -51,47 +51,48 @@
         align-content: center;
       }
 
-        .poema {
-          max-width: 600px;
-          margin: auto;
-          padding: 20px;
-          font-family: Georgia, serif;
-          background-color: #f9f9f9;
-          border: 1px solid #ddd;
-          border-radius: 10px;
-          box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
+      .poema {
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 20px;
+        padding: 20px;
+        font-family: Georgia, serif;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .titulopoema {
+        text-align: center;
+        margin-bottom: 1em;
+        cursor: not-allowed;
+      }
 
-        .poema h2 {
-          text-align: center;
-          margin-bottom: 1em;
-        }
+      .poema p {
+        white-space: pre-line;
+        line-height: 1.6;
+      }
 
-        .poema p {
-          white-space: pre-line;
-          line-height: 1.6;
-        }
+      .poema .autor {
+        text-align: right;
+        margin-top: 1em;
+        font-style: italic;
+      }
 
-        .poema .autor {
-          text-align: right;
-          margin-top: 1em;
-          font-style: italic;
-        }
+      .poema .toggle-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007BFF;
+        cursor: progress;
+        text-decoration: underline;
+        font-size: 0.95em;
+      }
 
-        .poema .toggle-link {
-          display: inline-block;
-          margin-top: 10px;
-          color: #007BFF;
-          cursor: pointer;
-          text-decoration: underline;
-          font-size: 0.95em;
-        }
-
-        .poema .explicacion {
-          margin-top: 10px;
-          font-size: 0.95em;
-          color: #333;
-        }
+      .poema .explicacion {
+        margin-top: 10px;
+        font-size: 0.95em;
+        color: #333;
+      }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,36 +133,69 @@
       </div>
     </div>
 
-    <div class="oculto" id="B2">
-      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmJ9hjsM67T9Sitp5Fx887XyazbO3J1BkVqabtnWryP7LjJ1j7yIGNKaRvFaqY3EGVMSOct4QcQECO/pubhtml?widget=true&amp;headers=false"></iframe>
+    <div style="width: 1600px; height: 1000px;" class="oculto" id="B2">
+      <iframe style="width: 1600px; height: 1000px;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmJ9hjsM67T9Sitp5Fx887XyazbO3J1BkVqabtnWryP7LjJ1j7yIGNKaRvFaqY3EGVMSOct4QcQECO/pubhtml?widget=true&amp;headers=false"></iframe>
     </div>
 
-    <div class="poema oculto" id="poemas">
-      <h2>Un soneto me manda hacer Violante</h2>
-      <p>
-    Un soneto me manda hacer Violante,
-    que en mi vida me he visto en tal aprieto;
-    catorce versos dicen que es soneto:
-    burla burlando van los tres delante.
+    <div class="oculto" id="poemas">
+      <div class="poema">
+        <span class="titulopoema" onclick="document.getElementById('sonetoViolante').classList.toggle('visible');">Un soneto me manda hacer Violante</span>
+        <div class="oculto" id="sonetoViolante">
+          <p>
+            Un soneto me manda hacer Violante,
+            que en mi vida me he visto en tal aprieto;
+            catorce versos dicen que es soneto:
+            burla burlando van los tres delante.
 
-    Yo pensé que no hallara consonante,
-    y estoy a la mitad de otro cuarteto;
-    mas si me veo en el primer terceto,
-    no hay cosa en los cuartetos que me espante.
+            Yo pensé que no hallara consonante,
+            y estoy a la mitad de otro cuarteto;
+            mas si me veo en el primer terceto,
+            no hay cosa en los cuartetos que me espante.
 
-    Por el primer terceto voy entrando,
-    y parece que entré con pie derecho,
-    pues fin con este verso le voy dando.
+            Por el primer terceto voy entrando,
+            y parece que entré con pie derecho,
+            pues fin con este verso le voy dando.
 
-    Ya estoy en el segundo, y aun sospecho
-    que estoy los trece versos acabando;
-    contad si son catorce, y está hecho.
-      </p>
-      <p class="autor">— Lope de Vega</p>
+            Ya estoy en el segundo, y aun sospecho
+            que estoy los trece versos acabando;
+            contad si son catorce, y está hecho.
+          </p>
+          <p class="autor">— Lope de Vega</p>
+          <span class="toggle-link" onclick="document.getElementById('explicacionsonetoViolante').classList.toggle('visible');">¿Por qué este poema?</span>
+          <div class="explicacion oculto" id="explicacionsonetoViolante">
+            Este poema es el primero que leí siendo algo consciente. Me mandaron a comentar o analizar un poema con 12 años y escogí este. Desde entonces, el soneto es mi estilo de poema favorito y al que accedo siempre como primera opción.
+          </div>
+        </div>
+      </div>
 
-      <span class="toggle-link" onclick="document.getElementById('explicacion').classList.toggle('visible');">¿Por qué este poema?</span>
-      <div class="explicacion oculto" id="explicacion">
-        Este poema es el primero que leí siendo algo consciente. Me mandaron a comentar o analizar un poema con 12 años y escogí este. Desde entonces, el soneto es mi estilo de poema favorito y al que accedo siempre como primera opción.
+      <div class="poema">
+        <span class="titulopoema" onclick="document.getElementById('viaje').classList.toggle('visible');">Oda nº1</span>
+        <div class="oculto" id="viaje">
+          <p>
+            En un ruidoso pasillo acabó
+            lo que bonito estuvo siendo y era,
+            lo que desde poco antes quisiera,
+            lo que el pasado sábado empezó.
+
+            Mi yo del pasado no lo soñó,
+            mas en esta la nueva primavera
+            y sin que ni yo mismo lo supiera,
+            el viaje a Eastbourne a mí me cambió.
+
+            Entendí que lo mío no es lo único
+            y que enfocarse sin tener opciones
+            puede llegar a hacerte ser un básico.
+
+            Pero mi brillo asciende con mis sones.
+            Olivares posee un brillo mágico
+            y es el que une nuestros corazones.
+          </p>
+          <p class="autor">— Rainiero López Vargas 9/4/2025</p>
+          <span class="toggle-link" onclick="document.getElementById('explicacionviaje').classList.toggle('visible');">¿Por qué este poema?</span>
+          <div class="explicacion oculto" id="explicacionviaje">
+            Esto lo hice a modo de oda al viaje que hice a Eastbourne. La simplicidad que posee para mi nivel en ese momento se debió a la falta de recursos tales como tiempo, internet para referencias o simplemente un diccionario. Esta carencia se debe a su vez al hecho de que lo escribí estando montado en el avión. Me hubiera dado tiempo a mejorarlo un poco, pero me mareé y lo dejé así.
+          </div>
+        </div>
       </div>
     </div>
   </body>
