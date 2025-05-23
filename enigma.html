@@ -409,21 +409,18 @@
             const rotor = rotors[rotorIndex];
             
             if (!reverse) {
-                // Directo: de alfabeto a rotor
+                // Directo: de alfabeto a rotor (CIFRADO)
                 const charIndex = alphabet.indexOf(char);
                 const adjustedIndex = (charIndex + position) % 26;
                 return rotor[adjustedIndex];
             } else {
-                // Inverso: de rotor a alfabeto
-                const adjustedRotor = rotor.split('').map((c, i) => {
-                    const newIndex = (i - position + 26) % 26;
-                    return { char: c, originalIndex: newIndex };
-                }).sort((a, b) => a.originalIndex - b.originalIndex);
+                // Inverso: de rotor a alfabeto (DESCIFRADO)
+                // Encontrar en qué posición del rotor está este carácter
+                const rotorPos = rotor.indexOf(char);
+                if (rotorPos === -1) return char;
                 
-                const rotorIndex = rotor.indexOf(char);
-                if (rotorIndex === -1) return char;
-                
-                const originalIndex = (rotorIndex - position + 26) % 26;
+                // Deshacer el offset de posición
+                const originalIndex = (rotorPos - position + 26) % 26;
                 return alphabet[originalIndex];
             }
         }
@@ -498,18 +495,18 @@
                         advanceRotors();
                         
                     } else {
-                        // DESCIFRADO: Entrada -> Rotores (inverso) -> Plugboard
+                        // DESCIFRADO: Rotor 3 (inverso) -> Rotor 2 (inverso) -> Rotor 1 (inverso) -> Plugboard
                         
-                        // 1. Avanzar rotores antes del procesamiento (para sincronizar)
-                        advanceRotors();
-                        
-                        // 2. Pasar por los rotores en orden inverso (3 -> 2 -> 1)
+                        // 1. Pasar por los rotores en orden inverso: 3 -> 2 -> 1 (todos con función inversa)
                         processedChar = rotorSubstitution(processedChar, selectedRotors[2], rotorPositions[2], true);
                         processedChar = rotorSubstitution(processedChar, selectedRotors[1], rotorPositions[1], true);
                         processedChar = rotorSubstitution(processedChar, selectedRotors[0], rotorPositions[0], true);
                         
-                        // 3. Aplicar plugboard
+                        // 2. Aplicar plugboard al final
                         processedChar = applyPlugboard(processedChar, plugboard);
+                        
+                        // 3. Avanzar rotores DESPUÉS del procesamiento (igual que en cifrado)
+                        advanceRotors();
                     }
                     
                     result += processedChar;
