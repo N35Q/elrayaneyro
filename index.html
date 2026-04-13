@@ -111,7 +111,7 @@
     <div style="display: flex; justify-content: center;">
       <button class="goofy" onclick="document.getElementById('Insultos').classList.toggle('visible');">Prueba Insultos</button>
       <button class="goofy" onclick="document.getElementById('games').classList.toggle('visible');">Games</button>
-      <button class="goofy" onclick="document.getElementById('B2').classList.toggle('visible');">Plantilla B2</button>
+      <!-- <button class="goofy" onclick="document.getElementById('B2').classList.toggle('visible');">Plantilla B2</button> -->
       <button class="goofy" onclick="document.getElementById('poemas').classList.toggle('visible');">Poemas</button>
       <button onclick="window.location.href='enigma.html';">Enigma</button>
     </div>
@@ -134,15 +134,21 @@
       </div>
     </div>
 
+    <!--
     <div style="width: 1600px; height: 1000px;" class="oculto" id="B2">
       <iframe style="width: 1600px; height: 1000px;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRmJ9hjsM67T9Sitp5Fx887XyazbO3J1BkVqabtnWryP7LjJ1j7yIGNKaRvFaqY3EGVMSOct4QcQECO/pubhtml?widget=true&amp;headers=false"></iframe>
     </div>
+    -->
 
     <div class="oculto" id="poemas">
-      <div class="poema">
-        <span class="titulopoema" onclick="document.getElementById('sonetoViolante').classList.toggle('visible');">Un soneto me manda hacer Violante</span>
-        <div class="oculto" id="sonetoViolante">
-          <p>
+      <div id="contenedor-poemas"></div>
+    </div>
+
+    <script>
+      var poemas = [
+        {
+          titulo: "Un soneto me manda hacer Violante",
+          poema: `
             Un soneto me manda hacer Violante,
             que en mi vida me he visto en tal aprieto;
             catorce versos dicen que es soneto:
@@ -159,20 +165,14 @@
 
             Ya estoy en el segundo, y aun sospecho
             que estoy los trece versos acabando;
-            contad si son catorce, y está hecho.
-          </p>
-          <p class="autor">— Lope de Vega</p>
-          <span class="toggle-link" onclick="document.getElementById('explicacionsonetoViolante').classList.toggle('visible');">¿Por qué este poema?</span>
-          <div class="explicacion oculto" id="explicacionsonetoViolante">
-            Este poema es el primero que leí siendo algo consciente. Me mandaron a comentar o analizar un poema con 12 años y escogí este. Desde entonces, el soneto es mi estilo de poema favorito y al que accedo siempre como primera opción.
-          </div>
-        </div>
-      </div>
-
-      <div class="poema">
-        <span class="titulopoema" onclick="document.getElementById('viaje').classList.toggle('visible');">Oda nº1</span>
-        <div class="oculto" id="viaje">
-          <p>
+            contad si son catorce, y está hecho.`,
+          autor: "— Lope de Vega",
+          pregunta: "¿Por qué este poema?",
+          porque: "Este poema es el primero que leí siendo algo consciente. Me mandaron a comentar o analizar un poema con 12 años y escogí este. Desde entonces, el soneto es mi estilo de poema favorito y al que accedo siempre como primera opción."
+        },
+        {
+          titulo: "Oda nº1",
+          poema: `
             En un ruidoso pasillo acabó
             lo que bonito estuvo siendo y era,
             lo que desde poco antes quisiera,
@@ -189,15 +189,100 @@
 
             Pero mi brillo asciende con mis sones.
             Olivares posee un brillo mágico
-            y es el que une nuestros corazones.
-          </p>
-          <p class="autor">— Rainiero López Vargas 9/4/2025</p>
-          <span class="toggle-link" onclick="document.getElementById('explicacionviaje').classList.toggle('visible');">¿Por qué este poema?</span>
-          <div class="explicacion oculto" id="explicacionviaje">
-            Esto lo hice a modo de oda al viaje que hice a Eastbourne. La simplicidad que posee para mi nivel en ese momento se debió a la falta de recursos tales como tiempo, internet para referencias o simplemente un diccionario. Esta carencia se debe a su vez al hecho de que lo escribí estando montado en el avión. Me hubiera dado tiempo a mejorarlo un poco, pero me mareé y lo dejé así.
-          </div>
-        </div>
-      </div>
-    </div>
+            y es el que une nuestros corazones.`,
+          autor: "— Rainiero López Vargas 9/4/2025",
+          pregunta: "¿Por qué este poema?",
+          porque: "Esto lo hice a modo de oda al viaje que hice a Eastbourne. La simplicidad que posee para mi nivel en ese momento se debió a la falta de recursos tales como tiempo, internet para referencias o simplemente un diccionario. Esta carencia se debe a su vez al hecho de que lo escribí estando montado en el avión. Me hubiera dado tiempo a mejorarlo un poco, pero me mareé y lo dejé así."
+        },
+        {
+          titulo: "Plan B",
+          poema: `
+            Con este título uno se espera
+            que esto vaya de encontrar otra forma
+            de conseguir lo que pasada norma
+            no pudo, pero de otra manera.
+
+            Nada se aleja más en esta era.
+            Pues en buen punto de inflexión torna
+            mi vida, que la anterior deforma;
+            como la muerte a esta mera.
+
+            Mucho de mi camino me he alejado.
+            Pues no es el fin el que indica el camino,
+            ni tampoco el camino atravesado.
+
+            Es el camino, el que con hilo fino
+            te mostrará hasta el que te ha guiado
+            tu tejida historia en el camino
+
+
+            Dejando estás cosas aparte
+            y sin aún saber si tú quieres formar parte,
+            te ofrezco conmigo llevarte a marte,
+            para allí volverte a decir que eres una obra de arte
+
+            Dicho esto frente al toro me alzo;
+            Como buen nazareno: firme pero descalzo,
+            y con confianza, como en un abrazo;
+            aprovechando que aún estamos en marzo.
+
+            Al final del día, cuando oscureció;
+            tras horas y horas donde el sol le dió;
+            en mitad de la noche azul se prendió
+            una vela que el mundo entero iluminó.
+
+            Pudiendo un bosque hacer arder en llamas,
+            esa vela se reprime y aguanta hasta la siguiente mañana
+            para asegurarse de que lo que ama
+            podrá aguantar semejante flama.
+
+            Pasión, dolor que la sangre me arranca.
+            Cirios que me guían entre nieve y azahares
+            a un corazón en el corazón de Olivares`,
+          autor: "— Rainiero López Vargas 13/3/2026",
+          pregunta: "¿Por qué este poema?",
+          porque: "La importancia de este poema no es ni más ni menos que por ser el primero que he recitado a la persona a la que va dirigido. Lo escribí en clases de matemáticas y en mi casa. La primera parte, abstracta, parece una absurda explicación del título, pero refleja más que eso. la segunda es orientada al 100% al objetivo del poema: demostrar mi amor."
+        }
+        /*
+        Para añadir poemas:
+        en el último "}""
+        se añade una ","
+        y sería
+        {
+        titulo: "Título del poema",
+        poema: `
+          Verso uno
+          verso 2
+          
+          verso 3`,
+        autor: "— Nombre, fecha",
+         pregunta: "¿Por qué este poema?",
+         porque: "Explicación personal..."
+        }
+        */
+      ];
+
+      function toggleId(id) {
+        document.getElementById(id).classList.toggle('visible');
+      }
+
+      var contenedor = document.getElementById('contenedor-poemas');
+      for (var i = 0; i < poemas.length; i++) {
+        var d = poemas[i];
+        var cuerpoId = 'cuerpo-' + i;
+        var expId = 'exp-' + i;
+        var div = document.createElement('div');
+        div.className = 'poema';
+        div.innerHTML =
+          '<span class="titulopoema" onclick="toggleId(\'' + cuerpoId + '\')">' + d.titulo + '</span>' +
+          '<div class="oculto" id="' + cuerpoId + '">' +
+            '<p>' + d.poema + '</p>' +
+            '<p class="autor">' + d.autor + '</p>' +
+            '<span class="toggle-link" onclick="toggleId(\'' + expId + '\')">' + d.pregunta + '</span>' +
+            '<div class="explicacion oculto" id="' + expId + '">' + d.porque + '</div>' +
+          '</div>';
+        contenedor.appendChild(div);
+      }
+    </script>
   </body>
 </html>
