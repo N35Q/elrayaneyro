@@ -152,7 +152,7 @@
             intenso.
             Dolor.
             Sin necesidad.
-            Sin utilidad
+            Sin utilidad.
             Sin fin,
             pero presente;
             sobretodo en el pasado.
@@ -196,7 +196,7 @@
             Sin embargo no se sabe
             de uno mismo lo que él quiere.
             Y lo malo de eso
-            Es que no suele ser bueno
+            es que no suele ser bueno
             
             Me sorprende y me gusta
             que por ti asoma una luz
@@ -209,8 +209,8 @@
             es lo que me asombra de ti.
             
             Lo que ni tú ves
-            y pocos podemos.
-            Es lo que me atrae.
+            y pocos podemos
+            es lo que me atrae.
             Pero lo que crees que te mueve
             y lo que se ve simple
             es lo que me aleja.
@@ -220,7 +220,7 @@
             
             Si simplificara mis ideas no sería yo.
             ¿Conseguiría lo que quiero? Tal vez.
-            Pero me prefiero así
+            Pero me prefiero así.
             
             Esta es mi virtud que quiero que conozcas.
             Porque ves lo que es, aunque no lo entiendas.
