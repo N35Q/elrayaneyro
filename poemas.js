@@ -308,6 +308,56 @@
           autor: "— Rainiero López Vargas 13/4/2026",
           pregunta: "¿Por qué este poema?",
           porque: "Alegoría. Simple, completa, detallada. Sin terminar, pero con punto y final."
+        },
+        {
+          titulo: "Porque.",
+          poema: `
+            ¿Por qué todo cambia en un momento?
+            ¿Por qué se pasa del entusiasmo al aburrimiento?
+            ¿Por qué a partir del primer rechazo
+            deja de ser todo besos y abrazos?
+            ¿Por qué, si "nada cambiará",
+            cambia todo, y para mal?
+            ¿Por qué, si somos amigos y lo seremos,
+            te vuelves mala y fría como el hielo?`,
+          autor: "— Rainiero López Vargas 13/4/2026",
+          pregunta: "¿Por qué este poema?",
+          porque: "No sé. Drama existencial."
+        },
+        {
+          titulo: "Mi droga.",
+          poema: `
+            El río del amor,
+            que por mis venas fluye,
+            es sangrienta por matanza.
+            Mata por dentro
+            a la persona que alcanza.
+            Moribundoo el muerto
+            persigue el amor;
+            sigue el curso del río
+            hasta el precipicio mayor.
+            
+            El amor me hizo adicto a él
+            sin ni siquiera probarlo;
+            por eso quisiera saber
+            al menos a qué sabe.
+            ¿Sabe a luz? ¿A verdad?
+            ¿Sabe a bellaza? ¿A bondad?
+            ¿O sabe amargo? ¿A maldad?
+            ¿A mentira? ¿A oscuridad?
+            
+            Al amor le ofrezco sinceridad,
+            espacio y tiempo, libertad.
+            Ofrezco lo que tengo, lo que soy;
+            y quiero, aunque no espero, lo que doy.
+            
+            Del amor espero
+            que sea sincero,
+            que sea duradero
+            y que sea verdadero`,
+          autor: "— Rainiero López Vargas 15/4/2026",
+          pregunta: "¿Por qué este poema?",
+          porque: "Cuando lo terminé me recordó a LA DROGA de Bad Bunny, de ahí el nombre."
         }
         /*
         Para añadir poemas:
