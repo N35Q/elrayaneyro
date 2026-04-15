@@ -184,7 +184,7 @@
             Pero es parte de la experiencia, ¿no?
             
             Creemos que nos conocemos,
-            que como a libro aboierto nos leemos;
+            que como a libro abierto nos leemos;
             pero no vemos más
             que lo que el otro nons deja ver.
             
