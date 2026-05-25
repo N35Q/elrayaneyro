@@ -358,6 +358,38 @@
           autor: "— Rainiero López Vargas 15/4/2026",
           pregunta: "¿Por qué este poema?",
           porque: "Cuando lo terminé me recordó a LA DROGA de Bad Bunny, de ahí el nombre."
+        },
+        {
+          titulo: "Abrazo",
+          poema: `
+            Usado a nivel global;
+            culturas occidentales asiáticas y africanas.
+            Sientan bien en las noches y en las mañanas.
+            Se usa en las calles y en la sala oval.
+
+            Está cargado de significado,
+            significado que cambia con la situación.
+            Puede darse en un entierro o en una celebración.
+            Produce una sensación cuando es verdadero de verdadero llenado.
+
+            Va más allá de un simple contacto,
+            es una muestra de confianza.
+            Demuestras que en la otra persona depositas esperanza;
+            transmites todos tus sentimientos en el acto.
+
+            Por eso para mí tienen tanta importancia.
+            Y aunque sé que se pueden usar de forma engañosa,
+            me gusta creer que son más reales de lo que uno quiere,
+            que dificultan la traición,
+            que fomentan el amor,
+            que son un medio de comunicación,
+            que no necesita palabras ni grandes acciones,
+            que te transmiten toda la pasión,
+            que no deja nada por decir ni escuchar,
+            que llena cada rincón de cada corazón.`,
+          autor: "— Rainiero López Vargas 15/4/2026",
+          pregunta: "¿Por qué este poema?",
+          porque: "Cuando lo terminé me recordó a LA DROGA de Bad Bunny, de ahí el nombre."
         }
         /*
         Para añadir poemas:
