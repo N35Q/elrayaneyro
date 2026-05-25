@@ -387,9 +387,9 @@
             que te transmiten toda la pasión,
             que no deja nada por decir ni escuchar,
             que llena cada rincón de cada corazón.`,
-          autor: "— Rainiero López Vargas 15/4/2026",
+          autor: "— Rainiero López Vargas 24/5/2026",
           pregunta: "¿Por qué este poema?",
-          porque: "Cuando lo terminé me recordó a LA DROGA de Bad Bunny, de ahí el nombre."
+          porque: "Me he dado cuenta del valor que tienen. Y es una cosa común en todos los seres humanos, es universal."
         }
         /*
         Para añadir poemas:
